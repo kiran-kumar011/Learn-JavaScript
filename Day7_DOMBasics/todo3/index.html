@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+   <script>
+   	 document.body.style.fontFamily = 'Arial, sans-serif';
+   	 var nickName = document.querySelectorAll('li');
+   	 nickName[0].innerText = 'rob';
+   	 nickName[1].innerText = 'blue';
+   	 nickName[2].innerText = 'Shimoga';
+   	 for (i = 0; i < nickName.length; i++){
+   	 		nickName[i].classList.add('listitem');
+   	 }
+   	 var image = document.createElement('img');
+   	 image.src = 'https://www.babble.com/wp-content/uploads/2011/06/BabyBoyNames_630.jpg';
+   	 document.body.appendChild(image);
+
+   	 //Google logo 
+   	var replaceLogo = document.getElementsByTagName('img');
+		replaceLogo[0].src = 'https://casscommunity3.files.wordpress.com/2017/06/yahoo-logo.png';
+
+		//select the google search and replace text inside it.
+		var searchButton = document.querySelectorAll('input');
+		searchButton[5].value = 'yahoo';
+
+		//select i'm Feeling lucky and replace it with i'm Lucky.
+		searchButton[6].value = "I'm Lucky";
+
+
+   </script>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

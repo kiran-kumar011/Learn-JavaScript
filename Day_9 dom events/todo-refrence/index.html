@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="container">
+    <input placeholder="Add new task" type="text" name="" id="todo-text" />
+    <button class="button-primary add-todo">ADD TODO</button>
+    <div class="lists"><ul></ul></div>
+    <script src="main.js"></script>
+    <!-- <script>
+      function addTodo() {
+        var inputText = document.getElementById("todo-text");
+        if (inputText.value) {
+          var li = document.createElement("li");
+          var todoCheck = document.createElement("input");
+          todoCheck.type = "checkbox";
+          var span = document.createElement("span");
+          span.textContent = inputText.value;
+
+          li.appendChild(todoCheck);
+          li.appendChild(span);
+
+          document.querySelector("ul").appendChild(li);
+          inputText.value = "";
+        }
+      }
+      function handleEnter(event) {
+        console.log(event);
+        if (event.keyCode === 13) {
+          addTodo();
+        }
+      }
+      document.querySelector("button").addEventListener("click", addTodo);
+      document
+        .querySelector("#todo-text")
+        .addEventListener("keydown", handleEnter);
+    </script> -->
+  </body>
+</html>

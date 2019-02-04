@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To do list</title>
+  </head>
+
+  <body>
+  	<h1>DOM Basics</h1>
+  	<div id='parent'>
+  		
+  	</div>
+  	<ul class='listContainer'>
+  			
+  		</ul>	
+    <script> 
+    	var parentInput = document.querySelector('#parent');
+    	var paragraph = document.createElement('p');
+    	paragraph.textContent = "Hello Javascript";
+    	parentInput.appendChild(paragraph);
+    	paragraph.innerHTML = 'I Love <strong>Javascript</strong>';
+    	var ulContainer = document.querySelector('.listContainer');
+    	var list1 = document.createElement('li');
+    	list1.textContent = 'Buy groceries';
+    	ulContainer.appendChild(list1);
+    	var list2 = document.createElement('li');
+    	list2.textContent = 'Feed the cat';
+    	ulContainer.appendChild(list2);
+    	var list3 = document.createElement('li');
+    	list3.textContent = 'Da laundry';
+    	ulContainer.appendChild(list3);
+    	ulContainer.removeChild(list2);
+
+    </script>
+  </body>
+</html>

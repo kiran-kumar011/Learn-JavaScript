@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Book List</title>
+ </head>
+<body>
+
+<script>
+	var heading = document.createElement('h1');
+	heading.innerText = 'My Book List';
+	document.body.appendChild(heading);
+	var arr = [{title: 'The Design of EveryDay Things',
+   author: 'Don Norman',
+   alreadyRead: false
+  },
+  {title: 'The Most Human Human',
+   author: 'Brian Christian',
+   alreadyRead: true
+  }]
+  arr.forEach(value => {
+  	var para = document.createElement('p');
+  	para.innerHTML = `Book Title: <span>${value.title}</<span><br>By : <span>${value.author}</span><img src =${value.src}/>`;
+  	document.body.appendChild(para);
+  	// if (value.alreadyRead != true){
+  	// 	value.alreadyRead.style.background = 'red';
+  	// }else if (value.alreadyRead === true){
+  	// 	 value.alreadyRead.style.background = 'black';
+
+  	// }
+
+  })
+  
+
+</script>
+</body>
+</html>

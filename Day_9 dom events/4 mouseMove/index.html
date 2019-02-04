@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mouse move event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        /*text-align: center;*/
+         /*margin: 0 auto;*/
+      }
+      span {
+        font-size: 30px;
+        text-align: left;
+      }
+      .parent {
+        border :5px solid limegreen;
+        display: inline-block;
+        padding: 50px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <h1>Mouse Move Cursor</h1>
+      <div>
+        <span id='screenX'>screen-X</span><br>
+        <span id='screenY'>screen-Y</span><br>
+        <span id='clientX'>client-X</span><br>
+        <span id='clientY'>client-Y</span>
+      </div>
+    </div>
+    <script>
+      var sy = document.getElementById('screenY');
+      var sx = document.getElementById('screenX');
+      var cx = document.getElementById('clientX');
+      var cy = document.getElementById('clientY');
+
+      function coordinates(e){
+        sx.innerText = e.screenX;
+        sy.innerText = e.screenY;
+        cx.innerText = e.clientX;
+        cy.innerText = e.clientY;
+      }
+
+      document.addEventListener('mousemove', coordinates);
+    </script>
+  </body>
+</html>

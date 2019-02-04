@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="">	
+		<title>To do</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="parent">
+			<h1>to dos</h1>
+			<div class="container">
+  			<input placeholder='What needs to be done ?' type="text" class="taskInput">
+  			<button class="addTask">Add</button>
+  		</div>
+				<ul class="tasks">
+				</ul>
+		</div>
+		<script>
+			var taskInput = document.querySelector('.taskInput');
+			var addTask = document.querySelector('.addTask');
+			var addLists = document.querySelector('.tasks');
+			var addingTodo = [{todoText: "Three", todoStatus: false},];
+			
+			addTask.onclick = function(){
+				var list = document.createElement('li');
+				list.innerHTML = `<input type="checkbox" class ='checkbox'>`;
+				list.innerHTML +=taskInput.value;
+				// list.innerHTML += `<i class="fas fa-times"></i>`;
+				if (taskInput.value !== ''){
+					addLists.appendChild(list);
+				}
+				taskInput.value = '';
+			};
+
+			// function storeTodo() {
+			// 	if(taskInput.value) {
+			// 		var newTodo = {
+			// 			todoText: taskInput.value,
+   //    			todoStatus: false
+			// 		};
+			// 		addingTodo.push(newTodo);
+			// 		addTask.onclick();
+			// 	}
+			// 	taskInput = '';
+			// }			
+			// addTask.addEventListener('click', storeTodo)
+		</script>
+	</body>
+</html>
+
+<!-- var todos = [
+  { todoText: "One", todoStatus: false },
+  { todoText: "Three", todoStatus: false }
+];
+
+var todoInput = document.querySelector("#todo-text");
+var button = document.querySelector(".add-todo");
+
+function addTodo() {
+  if (todoInput.value) {
+    var newTodo = {
+      todoText: todoInput.value,
+      todoStatus: false
+    };
+    todos.push(newTodo);
+    displayTodo();
+  }
+  todoInput.value = "";
+}
+
+
+function toggleTodo(e) {
+  var id = e.target.dataset.index;
+  todos[id].todoStatus = !todos[id].todoStatus;
+}
+
+function displayTodo() {
+  todos.forEach((todo, index) => {
+    var list = document.createElement("li");
+    var checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.setAttribute("data-index", index);
+    var span = document.createElement("span");
+    span.textContent = todo.todoText;
+    list.appendChild(checkBox);
+    list.appendChild(span);
+    document.querySelector("ul").appendChild(list);
+
+    checkBox.addEventListener("click", toggleTodo);
+  });
+} -->
+
+
+
+
+
+
