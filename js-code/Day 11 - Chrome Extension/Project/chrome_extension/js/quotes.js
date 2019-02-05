@@ -469,7 +469,7 @@ var quotes = [
 var para = document.createElement('h6');
 var div = document.querySelector('.quoteContainer');
 div.appendChild(para);
-para.innerText = quotes[0].quote;
+para.innerText = quotes[46].quote;
 
 
 function random(){

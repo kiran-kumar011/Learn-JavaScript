@@ -84,12 +84,13 @@ h2 {
 	text-shadow: 0 0 2px black;
 }
 .clockParent {
-	width: 120px;
-	height: 120px;
+	width: 150px;
+	height: 150px;
 	border: 3px solid white;
-	/*border-radius: 15px;*/
+	/*border-radius: 50%;*/
 	margin: 0 auto;
 	padding: 5px;
+  position: relative;
 }
 .clock-face {
 	width: 100%;
@@ -129,16 +130,17 @@ h2 {
 	font-size: 25px;
 	font-style: italic; 
 	color: white;
-	padding: 30px;
-	width: 700px;
+	padding-top: 180px;
+	width: 800px;
 	margin: 0px auto;
 }
 
 /* to do list styling */
 .todo-container {
 	position: absolute;
-	top: 15%;
-	left: 65%;
+	top: 10%;
+	left: 5%;
+  z-index: 1;
 }
 h3 {
   font-size: 30px;
@@ -298,6 +300,13 @@ a {
 }
 .inputHide {
   display : none;
+}
+.clockDigits {
+  position: absolute;
+  top: 5%;
+  left: 10.5%;
+  color: rgba(224,255,255,1);
+  z-index: 1;
 }
 /*# sourceMappingURL=main.css.map 
 

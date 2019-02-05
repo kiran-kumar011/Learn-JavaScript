@@ -21,6 +21,12 @@ function clockDisplay(){
 	secondHand.style.transform = `rotate(${secondDegrees}deg)`;
 	var hoursDegrees = ((hours / 12) * 360) + 90;
 	hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+	var digitalClock = hours + ':' + minutes +':'+ seconds;
+	var clockFace = document.querySelector('.clock-face');
+	var clockDigits = document.querySelector('.clockDigits');
+	clockDigits.textContent = digitalClock;
+	// console.dir(clockDigits);
+
 }
 clockDisplay();
 setInterval(clockDisplay, 1000);

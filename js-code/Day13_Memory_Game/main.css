@@ -53,18 +53,20 @@ body {
 
 .deck {
   margin: 0 auto;
-  padding: 1rem;
-  width: 42rem;
-  height: 42rem;
+  padding: 0.5rem;
+  width: 33rem;
+  height: 33rem;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
   background-color: skyblue;
   justify-content: space-around;
   align-items: center; }
 
 .card {
-  width: 9rem;
-  height: 9rem;
+  width: 7rem;
+  height: 7rem;
+  box-sizing: border-box;
   background-color: white;
   border-radius: 0.5rem; }
   .card i {
@@ -82,5 +84,24 @@ body {
   .cardDisabled i {
     font-size: 4rem;
     color: dodgerblue; }
+
+.header {
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto; }
+  .header h1 {
+    font-size: 40px; }
+
+.movesAndTime {
+  margin: 1rem auto;
+  width: 20rem;
+  display: grid;
+  grid-template-columns: 20rem 10rem;
+  grid-gap: 0.5rem; }
+  .movesAndTime .movesCount {
+    display: inline-block;
+    font-size: 2rem; }
+  .movesAndTime .timer {
+    font-size: 2rem; }
 
 /*# sourceMappingURL=main.css.map */
