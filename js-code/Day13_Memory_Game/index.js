@@ -30,6 +30,7 @@ function displayCard(e) {
   }
 }
 var moves = 0;
+
 function compareElm(elm) {
   if (firstFlip === null) {
     firstFlip = elm;
@@ -46,6 +47,7 @@ function compareElm(elm) {
       firstFlip = null, secondFlip = null;
     } else if (firstFlip.dataset.type === secondFlip.dataset.type) {
       firstFlip = null, secondFlip = null;
+      
     }
   }
   const movesCount = document.querySelector('.movesCount');
