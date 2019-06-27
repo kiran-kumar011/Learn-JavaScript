@@ -15,7 +15,7 @@ function storeTask(){
 		allToDo.push(newToDo);
 		inputBox.value = '';
 		// localStorage.setItem('toDoDragDrop', JSON.stringify(allToDo));
-		 displayToDo(allToDo);
+		displayToDo(allToDo);
 	}
 }
 
@@ -32,8 +32,6 @@ console.log(cols);
 var previousElm = null;
 var PrevIndex = null;
 function handleDragStart(e) {
-
-	console.dir(e.target.dataset.id, "handleDragStart");
 	e.target.style.opacity = "0.1";
 	// e.target.style.width = '400px';
 	previousElm = e.target;
@@ -43,28 +41,23 @@ function handleDragStart(e) {
 }
 
 function handleDragEnter(e){
-	console.log(e, "handleDragEnter");
 	this.classList.add('over');
 }
 
 function handleDragOver(e){
-	console.log(e, "handleDragOver");
 	if (e.preventDefault) {
     e.preventDefault(); // Necessary. Allows us to drop.
   }
   e.dataTransfer.dropEffect = 'move';// See the section on the DataTransfer object.
   e.target.style.opacity = "1";
-  console.log(e.target.style.background);
   return false;
 }
 
 function handleDragLeave(e){
-	console.log(e, "handleDragLeave");
 	this.classList.remove('over');
 }
 
 function handleDrop(e){
-	console.log(e, "handleDrop");
 	 if (e.stopPropagation) {
     e.stopPropagation(); // stops the browser from redirecting.
   }
@@ -87,12 +80,10 @@ function swap(first,second){
 }
 
 function handleDragEnd(e){
-	console.log(e, "handleDragEnd");
 	cols.forEach((col, index) => {
     col.classList.remove('over');
     col.style.opacity = "1";
     // e.target.style.width = '300px';
-
   });
 }
 
